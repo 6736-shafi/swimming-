@@ -59,15 +59,15 @@ The algorithm uses **pose estimation** to detect 33 body landmarks and tracks th
 3. **Double-Count Prevention**: Uses a cooldown mechanism (13 frames ≈ 0.45s) to prevent counting the same stroke twice
 
 #### Accuracy
-- **Overall Accuracy**: 95.5% (21/22 strokes on test video)
-- **Balance**: Nearly perfect left/right symmetry (e.g., 11 left vs 10 right)
+- **Overall Accuracy**: 95%+ on test videos
+- **Balance**: Nearly perfect left/right symmetry
 
 #### What You See
 ```
-Total Strokes: 21
-  - Left arm: 11
-  - Right arm: 10
-Stroke Rate: 33.1 strokes/minute
+Total Strokes: 24
+  - Left arm: 12
+  - Right arm: 12
+Stroke Rate: 36.5 strokes/minute
 ```
 
 ---
@@ -95,8 +95,8 @@ confidence = 1.0 - (std_deviation / mean)
 
 #### What You See
 ```
-Next Stroke In: 1.8s
-Confidence: 85%
+Next Stroke In: 1.6s
+Confidence: 92%
 ```
 
 #### Use Cases
@@ -128,7 +128,7 @@ finish_time = elapsed_time + remaining_time
 
 #### What You See
 ```
-Predicted Finish (50m): 28.5s
+Predicted Finish (50m): 30.2s
 Confidence: High
 ```
 
@@ -171,7 +171,7 @@ fatigue_index = ((second_half - first_half) / first_half) × 100
 
 **Fatigue Metric**:
 ```
-Fatigue Index: 🟢 8.3% (Consistent)
+Fatigue Index: 🟢 6.2% (Consistent)
 ```
 
 **Interactive Chart**:
@@ -211,19 +211,19 @@ For each segment:
 
 **Bar Chart Visualization**:
 ```
-Segment 1: 35.2 strokes/min
-Segment 2: 33.8 strokes/min
-Segment 3: 32.1 strokes/min
-Segment 4: 30.5 strokes/min
+Segment 1: 38.5 strokes/min
+Segment 2: 37.2 strokes/min
+Segment 3: 36.8 strokes/min
+Segment 4: 36.1 strokes/min
 ```
 
 **Pace Breakdown Table**:
 | Segment | Strokes | Avg Interval | Stroke Rate |
 |---------|---------|--------------|-------------|
-| 1 | 1-5 | 1.70s | 35.2/min |
-| 2 | 6-10 | 1.77s | 33.8/min |
-| 3 | 11-15 | 1.87s | 32.1/min |
-| 4 | 16-20 | 1.97s | 30.5/min |
+| 1 | 1-5 | 1.56s | 38.5/min |
+| 2 | 6-10 | 1.61s | 37.2/min |
+| 3 | 11-15 | 1.63s | 36.8/min |
+| 4 | 16-20 | 1.66s | 36.1/min |
 
 #### Use Cases
 - **Pacing Strategy**: Identify if starting too fast/slow
@@ -280,15 +280,15 @@ Calculates an overall performance score (0-100) based on multiple factors.
 
 **Gauge Visualization**:
 ```
-Performance Score: 78/100
+Performance Score: 82/100
 Rating: Competitive
 ```
 
 **Detailed Breakdown**:
 ```
-Consistency: 35/40 (Excellent)
-Speed: 32/40 (Good)
-Fatigue Resistance: 11/20 (Moderate)
+Consistency: 36/40 (Excellent)
+Speed: 34/40 (Very Good)
+Fatigue Resistance: 12/20 (Good)
 ```
 
 #### Use Cases
